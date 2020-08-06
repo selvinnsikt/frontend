@@ -18,3 +18,8 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Screenshots:
+
+Hero:
+![Hero](https://user-images.githubusercontent.com/20001253/89581480-59d2a780-d837-11ea-80c2-2590d293b6a9.png)
