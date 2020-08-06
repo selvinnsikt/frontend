@@ -1,12 +1,5 @@
 [
   {
-    "name": "inspire",
-    "path": "/inspire",
-    "component": "/home/alf/Source/Selvinnsikt/frontend/pages/inspire.vue",
-    "chunkName": "pages/inspire",
-    "_name": "_7a546916"
-  },
-  {
     "name": "index",
     "path": "/",
     "component": "/home/alf/Source/Selvinnsikt/frontend/pages/index.vue",
