@@ -1,29 +1,27 @@
 <template>
-  <section class="section hero is-fullheight">
+  <section>
     <b-loading :active="isLoading" :is-full-page="true" :can-cancel="false"></b-loading>
-    <div class="hero-body">
-      <div class="grid-container">
-        <div class="columns">
-          <div class="column">
-            <h1 class="title is-1">Selvinnsikt</h1>
-          </div>
+    <div class="grid-container">
+      <div class="columns">
+        <div class="column">
+          <h1 class="title is-1">Selvinnsikt</h1>
         </div>
+      </div>
 
-        <div class="columns">
-          <div class="column">
-            <b-field :type="nameInputType" :message="nameInputMessage" label="Navn:" id="nameInput">
-              <b-input @focus="resetNameInputValidation" size="is-large" v-model="name"></b-input>
-            </b-field>
-            <b-button
-              id="create"
-              size="is-large"
-              type="is-primary"
-              inverted
-              outlined
-              @click="createRoom"
-            >Lag Rom</b-button>
-            <b-button id="join" size="is-large" type="is-primary" inverted>Bli med</b-button>
-          </div>
+      <div class="columns">
+        <div class="column">
+          <b-field :type="nameInputType" :message="nameInputMessage" label="Navn:" id="nameInput">
+            <b-input @focus="resetNameInputValidation" size="is-large" v-model="name"></b-input>
+          </b-field>
+          <b-button
+            id="create"
+            size="is-large"
+            type="is-primary"
+            inverted
+            outlined
+            @click="createRoom"
+          >Lag Rom</b-button>
+          <b-button id="join" size="is-large" type="is-primary" inverted>Bli med</b-button>
         </div>
       </div>
     </div>
@@ -87,7 +85,7 @@ export default {
 
 h1 {
   text-align: center;
-  margin-top: -2.7em;
+  margin-top: 2em;
 }
 
 .grid-container {
@@ -96,10 +94,6 @@ h1 {
 button {
   display: block;
   margin: 1.5em auto;
-}
-.section {
-  background-color: $primary;
-  height: 100%;
 }
 #create {
   width: 8em;
