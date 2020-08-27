@@ -2,11 +2,16 @@
   <div class="main-content">
     <h1 class="title is-2">
       Velkommen
-      <span id="name">{{name}}</span>
+      <span id="name">{{ name }}</span>
     </h1>
     <p>Kopier denne koden og gi til vennene dine</p>
     <b-field id="roomInput">
-      <b-input readonly="true" :value="roomId" v-model="roomId"></b-input>
+      <b-input
+        size="is-large"
+        readonly="true"
+        :value="roomId"
+        v-model="roomId"
+      ></b-input>
     </b-field>
 
     <b-button
@@ -15,7 +20,8 @@
       :icon-left="readyButtonIcon"
       :type="readyButtonColor"
       inverted
-    >{{readyButtonText}}</b-button>
+      >{{ readyButtonText }}</b-button
+    >
   </div>
 </template>
 
@@ -54,7 +60,7 @@ export default {
 }
 #roomInput {
   margin-top: 1em;
-  width: 5.5em;
+  width: 7rem;
 }
 #name {
   text-decoration: underline;

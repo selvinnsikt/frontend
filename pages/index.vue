@@ -1,6 +1,10 @@
 <template>
   <section>
-    <b-loading :active="isLoading" :is-full-page="true" :can-cancel="false"></b-loading>
+    <b-loading
+      :active="isLoading"
+      :is-full-page="true"
+      :can-cancel="false"
+    ></b-loading>
     <div class="grid-container">
       <div class="columns">
         <div class="column">
@@ -10,9 +14,19 @@
 
       <div class="columns">
         <div class="column">
-          <b-field :type="nameInputType" :message="nameInputMessage" label="Navn:" id="nameInput">
-            <b-input @focus="resetNameInputValidation" size="is-large" v-model="name"></b-input>
+          <b-field
+            :type="nameInputType"
+            :message="nameInputMessage"
+            label="Navn:"
+            id="nameInput"
+          >
+            <b-input
+              @focus="resetNameInputValidation"
+              size="is-large"
+              v-model="name"
+            ></b-input>
           </b-field>
+          <hr class="dividerNoText" />
           <b-button
             id="create"
             size="is-large"
@@ -20,8 +34,17 @@
             inverted
             outlined
             @click="createRoom"
-          >Lag Rom</b-button>
-          <b-button id="join" size="is-large" type="is-primary" inverted>Bli med</b-button>
+            >Lag Rom</b-button
+          >
+          <div class="divider">OR</div>
+          <b-button
+            id="join"
+            size="is-large"
+            type="is-primary"
+            inverted
+            @click="joinRoom"
+            >Bli med</b-button
+          >
         </div>
       </div>
     </div>
@@ -54,6 +77,15 @@ export default {
     isEmptyOrSpaces(str) {
       return str === null || str.match(/^ *$/) !== null;
     },
+    joinRoom() {
+      if (this.isEmptyOrSpaces(this.name)) {
+        this.nameInputType = "is-danger";
+        this.nameInputMessage = "Navn påkrevd";
+        return;
+      }
+      //this.isLoading = true;
+      //let socket = new WebSocket("ws://localhost:8080/join/");
+    },
     createRoom() {
       if (this.isEmptyOrSpaces(this.name)) {
         this.nameInputType = "is-danger";
@@ -82,6 +114,7 @@ export default {
 <style lang="scss" scoped>
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+@import "~@creativebulma/bulma-divider";
 
 h1 {
   text-align: center;
@@ -106,5 +139,11 @@ button {
 #nameInput {
   width: 12em;
   margin: 0 auto;
+}
+.dividerNoText {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, $primary, $border, $primary);
 }
 </style>
