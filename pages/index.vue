@@ -18,7 +18,7 @@
             :type="nameInputType"
             :message="nameInputMessage"
             label="Navn:"
-            id="nameInput"
+            class="inputField"
           >
             <b-input
               @focus="resetNameInputValidation"
@@ -37,6 +37,9 @@
             >Lag Rom</b-button
           >
           <div class="divider">OR</div>
+          <b-field label="Rom ID:" class="inputField">
+            <b-input size="is-large"></b-input>
+          </b-field>
           <b-button
             id="join"
             size="is-large"
@@ -104,8 +107,6 @@ export default {
           console.log(err);
           this.isLoading = false;
         });
-      // TODO: Add some sort of loader
-      console.log("room create");
     },
   },
 };
@@ -136,7 +137,7 @@ button {
   width: 10em;
   display: block;
 }
-#nameInput {
+.inputField {
   width: 12em;
   margin: 0 auto;
 }
