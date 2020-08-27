@@ -1,9 +1,16 @@
 [
   {
+    "name": "room-id",
+    "path": "/room/:id",
+    "component": "/Users/Alf/Source/Web/selvinnsikt/frontend/pages/room/_id/index.vue",
+    "chunkName": "pages/room/_id/index",
+    "_name": "_638cca4b"
+  },
+  {
     "name": "index",
     "path": "/",
-    "component": "/home/alf/Source/Selvinnsikt/frontend/pages/index.vue",
+    "component": "/Users/Alf/Source/Web/selvinnsikt/frontend/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_c1f187e4"
+    "_name": "_1bc10300"
   }
 ]
