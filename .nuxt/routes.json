@@ -3,14 +3,12 @@
     "name": "room-id",
     "path": "/room/:id",
     "component": "/Users/Alf/Source/Web/selvinnsikt/frontend/pages/room/_id/index.vue",
-    "chunkName": "pages/room/_id/index",
-    "_name": "_638cca4b"
+    "chunkName": "pages/room/_id/index"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/Alf/Source/Web/selvinnsikt/frontend/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_1bc10300"
+    "chunkName": "pages/index"
   }
 ]
