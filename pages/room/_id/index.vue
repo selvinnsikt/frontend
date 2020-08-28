@@ -36,6 +36,14 @@ export default {
       ready: false,
     };
   },
+  created: function () {
+    let socket = new WebSocket(
+      `ws://localhost:8080/join/${this.roomId}/${this.name}`
+    );
+    socket.onerror = function (event) {
+      console.log(event);
+    };
+  },
   computed: {
     readyButtonIcon: function () {
       return this.ready ? "cancel" : "check";
