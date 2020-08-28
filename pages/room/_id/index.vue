@@ -1,6 +1,6 @@
 <template>
   <div class="main-content">
-    <h1 class="title is-2">
+    <h1 class="title is-3">
       Velkommen
       <span id="name">{{ name }}</span>
     </h1>
@@ -11,6 +11,7 @@
         readonly="true"
         :value="roomId"
         v-model="roomId"
+        id="roomId"
       ></b-input>
     </b-field>
 
@@ -57,8 +58,10 @@ export default {
 .main-content {
   margin: 2em auto;
   width: 50%;
+  text-align: center;
 }
 #roomInput {
+  margin: 1em auto 1em auto;
   margin-top: 1em;
   width: 7rem;
 }
